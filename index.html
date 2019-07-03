@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=0">
+    <title>vue-mobile-project-start</title>
+    <script>
+    (function() {
+      const size = 100; // 规定 rem 与 px 之间值的转换
+      const maxWidth = 750; // 设置基准宽度
+      const ratio = function() {
+        // const r = document.documentElement.clientWidth / maxWidth;
+        const r = window.screen.width / maxWidth;
+        return r >= 1 ? 1 : r <= 0.234 ? 0.234 : r;
+      };
+      document.documentElement.style.fontSize = ratio() * size + 'px';
+    })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
